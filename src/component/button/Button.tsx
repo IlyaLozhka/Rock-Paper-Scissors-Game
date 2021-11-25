@@ -1,17 +1,17 @@
-import React, {FunctionComponent} from 'react';
-import {Link} from "react-router-dom";
+import React, { FunctionComponent } from 'react';
+import { gameMode } from '../../utils/constans';
 import style from './button.module.scss';
 
-export const Button: FunctionComponent = () => {
+interface IProps {
+    readonly onSetModeHandler:(value:string) => void;
+}
 
+export const Button: FunctionComponent<IProps> = ({onSetModeHandler}) => {
     return (
         <div className={style.wrapper}>
-            <Link to={'/'}>
-                <button className={style.button}>
+                <button className={style.button} onClick={ () => onSetModeHandler(gameMode.SELECTION)}>
                     Let's Play Again!
                 </button>
-            </Link>
         </div>
-
     )
 };
