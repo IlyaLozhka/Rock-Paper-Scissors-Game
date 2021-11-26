@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { SelectionStage } from "./component/selection/SelectionStage";
 import { ComparisonStage } from "./component/comparison/ComparisonStage";
 import { Header } from "./component/header/Header";
@@ -23,15 +23,6 @@ const App: FunctionComponent = () => {
         onSetModeHandler(gameMode.COMPARISON);
     };
 
-    const computerRandomChoice = () => {
-        const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-        setComputerChoice(randomChoice);
-    };
-
-    useEffect(() => {
-        computerRandomChoice()
-    },[]);
-
     const gameModeSwitcher = () => {
         switch (mode) {
             case gameMode.SELECTION: return  <SelectionStage choices={choices}
@@ -42,6 +33,8 @@ const App: FunctionComponent = () => {
                 computerChoice={computerChoice}
                 score={score}
                 setScore={setScore}
+                choices={choices}
+                setComputerChoice={setComputerChoice}
                 onSetModeHandler={onSetModeHandler}
             />;
         }
