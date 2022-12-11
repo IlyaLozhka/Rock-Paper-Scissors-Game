@@ -35,7 +35,7 @@ export const SelectionStage: FunctionComponent<IProps> = (props) => {
                 }
 
                 return (
-                    <div className={style.block} onClick={() => onClickItemHandler(element)}>
+                    <div className={style.imageContainer} onClick={() => onClickItemHandler(element)}>
                             <img src={image} alt=""/>
                     </div>
                 )
