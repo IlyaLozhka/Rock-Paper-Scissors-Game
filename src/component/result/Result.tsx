@@ -20,9 +20,7 @@ export const Result: FunctionComponent<IProps> = (props) => {
         <div className={style.wrapper}>
             <ResultItem player={'Player'} choice={playerChoice}/>
             <div>
-                <p>
-                    {playerWin}
-                </p>
+                {playerWin}
             </div>
             <ResultItem player={'Computer'} choice={computerChoice}/>
         </div>

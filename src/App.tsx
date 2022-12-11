@@ -42,12 +42,8 @@ const App: FunctionComponent = () => {
 
     return (
         <div className={style.wrapper}>
-            <div>
-                <Header score={score}/>
-            </div>
-            <div>
-                {gameModeSwitcher()}
-            </div>
+            <Header score={score}/>
+            {gameModeSwitcher()}
         </div>
     );
 };

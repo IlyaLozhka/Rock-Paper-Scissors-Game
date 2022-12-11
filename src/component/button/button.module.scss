@@ -1,27 +1,27 @@
+@import 'src/assets/pallet';
+
 .wrapper {
-  position: relative;
-  top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
 }
 
 .button {
-  padding: 10px;
-  border: #7f0b7d 3px solid;
-  border-radius: 20px;
-  background-color: white;
-  color: #7f0b7d;
-  font-size: 24px;
-  font-weight: 700;
-  transition-duration: 0.5s;
+    padding: 10px;
+    border: $primary 3px solid;
+    border-radius: 20px;
+    color: $primary;
+    font-size: 24px;
+    font-weight: 700;
+    transition-duration: 0.5s;
 }
 
 .button:hover {
-  background-color: #ffc798;
-  color: white;
-  -webkit-text-stroke: 1.5px #7f0b7d ;
-  transform: scale(1.1);
-  transition-duration: 0.5s;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
 }
 
 .button:active {
-  transform: scale(1);
+    transform: scale(1);
 }
