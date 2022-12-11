@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import style from './header.module.scss';
-import logo from './../../img/logo.png';
+import { Logo } from "../logo/Logo";
 
 interface IProps {
     readonly score: number;
@@ -9,9 +9,7 @@ interface IProps {
 export const Header: FunctionComponent<IProps> = ({score}) => {
     return (
         <div className={style.wrapper}>
-            <div className={style.logoContainer}>
-                <img src={logo} alt="logo"/>
-            </div>
+            <Logo/>
             <div className={style.title}>
                 ROCK PAPER SCISSORS GAME
             </div>

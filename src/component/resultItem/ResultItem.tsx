@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
-import rock from "../../img/rock.png";
-import paper from "../../img/paper.png";
-import scissors from "../../img/scissors.png";
+import rock from "./../../assets/img/rock.png";
+import paper from "./../../assets/img/paper.png";
+import scissors from "./../../assets/img/scissors.png";
 import style from './resultItem.module.scss';
 
 interface IProps {

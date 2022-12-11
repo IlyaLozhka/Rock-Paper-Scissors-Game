@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import style from "./selectionStage.module.scss";
-import paper from './../../img/paper.png';
-import rock from './../../img/rock.png';
-import scissors from '../../img/scissors.png';
+import paper from './../../assets/img//paper.png';
+import rock from './../../assets/img//rock.png';
+import scissors from './../../assets/img//scissors.png';
 
 interface IProps {
     readonly onClickItemHandler: (value: string) => void;
@@ -36,7 +36,7 @@ export const SelectionStage: FunctionComponent<IProps> = (props) => {
 
                 return (
                     <div className={style.imageContainer} onClick={() => onClickItemHandler(element)}>
-                            <img src={image} alt=""/>
+                        <img src={image} alt=""/>
                     </div>
                 )
             })}
